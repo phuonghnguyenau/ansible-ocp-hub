@@ -1,0 +1,10 @@
+---
+- name: Determine environment variables for roxctl to set
+  ansible.builtin.set_fact:
+    roxctl_env_vars: "ROX_ENDPOINT={{ rhacs_central_endpoint }} + ROX_API_TOKEN={{ rhacs_api_token }}"
+
+- name: Upload RHACS vulnerability definitions
+  ansible.builtin.shell: |
+    {{ roxctl_env_vars }} {{ roxctl_upload_cmd }}
+  args:
+    chdir: "{{ roxctl_working_dir }}"

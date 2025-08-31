@@ -1,0 +1,6 @@
+---
+- ansible.builtin.include_tasks: check.yml
+
+- ansible.builtin.include_tasks: download.yml
+
+- ansible.builtin.include_tasks: upload.yml

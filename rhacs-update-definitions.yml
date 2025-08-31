@@ -1,0 +1,6 @@
+---
+- name: Update RHACS vulnerability defintions
+  hosts: management
+
+  roles:
+    - role: rhacs-update-definitions

@@ -1,0 +1,12 @@
+---
+- name: Ensure that path to {{ roxctl_binary }} exists
+  ansible.builtin.stat:
+    path: "{{ roxctl_binary }}"
+  register: roxctl_binary_status
+
+- name: Verify important variables have been set and correct
+  ansible.builtin.assert:
+    that:
+      - roxctl_binary_status.stat.exists
+      - rhacs_api_token != ""
+      - rhacs_central_address != ""

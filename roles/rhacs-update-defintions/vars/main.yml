@@ -1,0 +1,11 @@
+---
+roxctl_binary: "/usr/local/bin/roxctl"
+roxctl_upload_cmd: "{{ roxctl_binary }} scanner upload-db --scanner-db-file {{ roxctl_definition_file }}"
+roxctl_definition_source: "https://install.stackrox.io/scanner/{{ roxctl_definition_file }}"
+roxctl_definition_file: "scanner-vuln-updates.zip"
+roxctl_https_proxy: ""
+roxctl_working_dir: "/tmp/roxctl_tmp"
+
+# default assignment empty but should be assigned in the playbook
+rhacs_api_token: ""
+rhacs_central_endpoint: ""
