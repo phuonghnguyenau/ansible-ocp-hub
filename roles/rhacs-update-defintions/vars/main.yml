@@ -1,6 +1,6 @@
 ---
 roxctl_binary: "/usr/local/bin/roxctl"
-roxctl_upload_cmd: "{{ roxctl_binary }} scanner upload-db --scanner-db-file {{ roxctl_definition_file }}"
+roxctl_upload_cmd: "{{ roxctl_binary }} scanner upload-db --scanner-db-file {{ roxctl_working_dir }}/{{ roxctl_definition_file }}"
 roxctl_definition_source: "https://install.stackrox.io/scanner/{{ roxctl_definition_file }}"
 roxctl_definition_file: "scanner-vuln-updates.zip"
 roxctl_https_proxy: ""
