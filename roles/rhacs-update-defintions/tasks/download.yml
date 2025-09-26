@@ -8,6 +8,6 @@
 - name: Download RHACS vulnerability definitions
   ansible.builtin.get_url: 
     url: "{{ roxctl_definition_source }}"
-    dest: "{{ roxctl_working_dir }}/roxctl_definition_file"
+    dest: "{{ roxctl_working_dir }}/{{ roxctl_definition_file }}"
   environment:
     https_proxy: "{{ roxctl_https_proxy }}"
