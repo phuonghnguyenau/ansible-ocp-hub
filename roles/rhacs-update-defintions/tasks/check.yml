@@ -9,4 +9,4 @@
     that:
       - roxctl_binary_status.stat.exists
       - rhacs_api_token != ""
-      - rhacs_central_address != ""
+      - rhacs_central_endpoint != ""

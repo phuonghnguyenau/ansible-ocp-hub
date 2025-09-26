@@ -10,4 +10,4 @@
     url: "{{ roxctl_definition_source }}"
     dest: "{{ roxctl_working_dir }}/roxctl_definition_file"
   environment:
-    http_proxy: "{{ roxctl_https_proxy }}"
+    https_proxy: "{{ roxctl_https_proxy }}"
